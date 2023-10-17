@@ -1,9 +1,9 @@
 <?php
 $l = $_POST["login"];
-$p = $_POST["password"];
+$p = md5($_POST["password"]);
 
 include("cfg.php");
-$result = mysqli_query($mysqli, "SELECT * FROM users WHERE login=$l AND password=$p");
+$result = $mysqli->query("SELECT * FROM users WHERE login='$l' AND password='$p'");
 if(mysqli_num_rows($result) > 0){
     echo "Inside";
 }

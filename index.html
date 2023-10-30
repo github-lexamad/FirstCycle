@@ -28,9 +28,9 @@
         <div id="content">
             <div class="login">
                 <form class="formstyle" action="proc.php" method="post">
-                    <input name="login" autofocus placeholder="login"/>
-                    <input name="password" type="password" placeholder="password"/>
-                    <button type="submit" >Login</button>
+                    <input onchange='enableButton()' id="loginName" name="login" autofocus placeholder="login"/>
+                    <input onchange='enableButton()' id="loginPw"name="password" type="password" placeholder="password"/>
+                    <button id="login" disabled type="submit" >Login</button>
                 </form>
             </div>
         </div>
